@@ -1,0 +1,1 @@
+n,x,i;double a,d;double c(a,b){i=1;d=1.0;for(b=a-b>b?b:a-b;i<=b;)d=d*a--/i++;return d;}main(s){for(scanf("%d",&n);~scanf("%d",&n);printf("Scenario #%d:\n%.0lf\n\n",s++,a))for(a=.0,x=(n+1)/2;x>=0;x--)a+=c(n-x+1,x);}

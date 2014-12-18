@@ -1,0 +1,1 @@
+n,m,d[100008],a,i,j;bs(l,u){int h=(l+u)/2,k,s=0,c=m;if(l>=u)return;for(k=0;k<n&&d[k]<=h&&c;k++){if(s+d[k]>h)c--,s=d[k];else s+=d[k];}if(k==n&&c){if(a>h)a=h;bs(l,h);}else{bs(h+1,u);}}main(){scanf("%d%d",&n,&m);for(i=0;i<n;i++)scanf("%d",d+i);a=1000000001;bs(0,10001*n);printf("%d",a);}

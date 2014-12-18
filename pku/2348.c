@@ -1,0 +1,1 @@
+s,t,w;main(){for(;scanf("%d%d",&s,&t),s+t;printf("%s wins\n",w?"Ollie":"Stan"))for(w=0;(s/t+t/s<2)&&(t%s&&s%t);w=1-w){if(s>t)s-=t;else t-=s;}}

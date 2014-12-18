@@ -1,0 +1,31 @@
+N,M,g[410][410],f[410][410],b[410],q[410],w,i,j,k,s,t,a;
+min(x,y){return x>y?y:x;}
+main(){
+  for(;~scanf("%d%d",&N,&M);printf("%d\n",a)){
+    memset(g,0,sizeof(g));memset(f,0,sizeof(f));
+    t=1+M+N+1;
+    for(i=0;i<M;i++)g[0][i+1]=1;
+    for(i=0;i<N;i++)g[1+M+i][t-1]=1;
+    for(a=i=0;i<N;i++){
+      scanf("%d",&j);
+      for(k=0;k<j;k++)scanf("%d",&s),g[s][M+i+1]=1;
+    }
+    for(;;){
+      for(i=0;i<t;i++)b[i]=-1;b[0]=-2;
+      q[0]=0;w=1;
+      for(i=0;w-i&&b[t-1]==-1;){
+        j=q[i++];
+        for(k=1;k<t;k++){
+          if(b[k]==-1&&g[j][k]-(f[j][k]-f[k][j])>0){
+            b[k]=j,q[w++]=k;
+          }
+        }
+      }
+      if(b[t-1]==-1)break;
+      s=1<<20;
+      for(i=t-1,j=b[i];j>=0;i=j,j=b[i])s=min(s,g[j][i]-(f[j][i]-f[i][j]));
+      for(i=t-1,j=b[i];j>=0;i=j,j=b[i])f[j][i]+=s;
+      a+=s;
+    }
+  }
+}

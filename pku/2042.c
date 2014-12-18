@@ -1,0 +1,1 @@
+a,s[512],q,r,n,m,u[33000];main(p){for(p=0;p<512;p++)s[p]=p*p;for(p=1;p*p<=1<<15;p++)u[p*p]=1;for(;scanf("%d",&n),n;printf("%d\n",a)){for(a=p=0;s[p]*4<=n;p++){m=n-s[p];for(q=p;s[q]*3<=m;m+=s[q++]){m-=s[q];for(r=q;s[r]*2<=m;m+=s[r++]){m-=s[r];if(u[m])a++;}}}}}

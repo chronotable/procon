@@ -1,0 +1,1 @@
+h[500009],t[500009],i,j,k,n;double a;mg(l,m,r){i=0,j=l,k=m;for(;j<m&&k<r;){if(h[j]>h[k])a+=m-j,t[i++]=h[k++];else t[i++]=h[j++];}for(;j<m;t[i++]=h[j++]);for(;k<r;t[i++]=h[k++]);for(i=0;i<r-l;i++)h[l+i]=t[i];}dv(l,r,q){if(l+1<r)q=(l+r)/2,dv(l,q),dv(q,r),mg(l,q,r);}main(){for(;scanf("%d",&n),n;printf("%.0lf\n",a)){for(i=a=0;i<n;i++)scanf("%d",h+i);dv(0,n);}}

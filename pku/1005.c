@@ -1,0 +1,1 @@
+float x,y;main(a){scanf("%d",&a);for(a=1;~scanf("%f%f",&x,&y);a++)printf("Property %d: This property will begin eroding in year %d.\n",a,(int)(1+3.1415*(x*x+y*y)/100.0));printf("END OF OUTPUT.");}

@@ -1,0 +1,1 @@
+int n,q,a,b,c;main(){for(;scanf("%d%d",&n,&q),n+q;){int d[101]={c=0};for(;n>0&&scanf("%d",&a);n--)for(;a>0;a--,++d[b]>c?c=d[b]:0)scanf("%d",&b);for(a=0;a<101&&d[a]!=c;a++);printf("%d\n",d[a%101]<q?0:a);}}

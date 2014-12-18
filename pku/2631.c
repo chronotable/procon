@@ -1,0 +1,1 @@
+p[10001][500],n[10001],l[10001][500],a,b,c;w(r,s,t,i){a=t>a?t:a;for(;i<n[r];i++)p[r][i]-s?w(p[r][i],r,t+l[r][i],0):0;}main(){for(;~scanf("%d%d%d",&a,&b,&c);p[b][n[b]]=a,l[b][n[b]++]=c)p[a][n[a]]=b,l[a][n[a]++]=c;for(a=b=0;b<10001;b++)n[b]==1?w(b,0,0,0):0;printf("%d\n",a);}

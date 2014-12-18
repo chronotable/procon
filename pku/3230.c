@@ -1,0 +1,20 @@
+dp[101][101],p[101][101],e[101][101],n,m,t,i,j,k;
+main(){
+  for(;scanf("%d%d",&n,&m),n+m;){
+    for(i=0;i<n;i++)for(j=0;j<n;j++)scanf("%d",&p[i][j]);
+    for(i=0;i<m;i++)for(j=0;j<n;j++)scanf("%d",&e[i][j]);
+    for(i=0;i<n;i++){
+      dp[0][i]=e[0][i]-p[0][i];
+    }
+    for(i=1;i<m;i++){
+      for(j=0;j<n;j++){
+        t=-(1<<20);
+        for(k=0;k<n;k++)if(t<dp[i-1][k]+e[i][j]-p[k][j])t=dp[i-1][k]+e[i][j]-p[k][j];
+        dp[i][j]=t;
+      }
+    }    
+    t=-(1<<20);
+    for(i=0;i<n;i++)if(dp[m-1][i]>t)t=dp[m-1][i];
+    printf("%d\n",t);
+  }
+}

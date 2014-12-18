@@ -1,0 +1,27 @@
+u[21000],p[10000],pn,n,nn,t,ans,mx,i,j;
+main(){
+  p[pn++]=2;
+  for(i=4;i<20001;i+=2)u[i]=1;
+  for(i=3;i<20001;i+=2){
+    if(!u[i]){
+      p[pn++]=i;
+      for(j=i*2;j<20001;j+=i)u[j]=1;
+    }
+  }
+  mx=0;
+  for(scanf("%d",&t);t;t--){
+    scanf("%d",&n);
+    if(!u[n]){
+      if(mx<n)mx=n,ans=n;
+      continue;
+    }
+    nn=n;
+    for(i=0;i<pn;i++){
+      if(p[i]>nn)break;
+      if(nn%p[i]==0){
+        if(p[i]>mx)mx=p[i],ans=n;
+      }
+    }
+  }
+  printf("%d\n",ans);
+}

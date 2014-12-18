@@ -1,0 +1,1 @@
+i,j,k,p,o,m,n,d[501][501],a;main(){for(scanf("%d",&o);o>0;o--){scanf("%d",&n);m=99999;for(a=i=0;i<n;i++)for(j=0;j<n;j++)scanf("%d",&d[i][j]);for(i=1;i<n;i++){k=m;for(j=0;j<n;j++)if(d[0][j]&&k>d[0][j]){k=d[0][j];p=j;}a=a>k?a:k;for(j=0;j<n;j++)d[0][j]=d[0][j]>d[p][j]?d[p][j]:d[0][j];d[0][p]=0;}printf("%d\n",a);}}

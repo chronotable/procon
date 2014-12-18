@@ -1,0 +1,19 @@
+main(){
+int ans[10001],p[10001],n=0,s,i,j;
+for(i=0;i<10001;i++)ans[i]=1;
+for(i=2;i<10001;i++){
+if(ans[i]){
+for(j=i*2;j<10001;j+=i)ans[j]=0;
+p[n++]=i;
+}
+}
+for(i=0;i<n;i++){
+s=p[i];
+for(j=i+1;j<n;j++){
+s+=p[j];
+if(s>10000)break;
+ans[s]++;
+}
+}
+for(;scanf("%d",&n),n;)printf("%d\n",ans[n]);
+}

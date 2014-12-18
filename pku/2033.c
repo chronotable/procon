@@ -1,0 +1,1 @@
+char s[9999];n,a;double u[9999];double f(p){double v;if(s[p]=='0')return 0.0;if(u[p])return u[p];if(p==n)return 1.0;if(p<n-1&&(s[p]=='1'||(s[p]=='2'&&s[p+1]-'0'<7)))v=s[p+1]-'0'?f(p+1)+f(p+2):f(p+2);else v=f(p+1);if(!u[p])u[p]=v;return v;}main(){for(;gets(s),*s-'0';memset(u,0,sizeof(u)))n=strlen(s),printf("%.0lf\n",f(0));}

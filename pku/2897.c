@@ -1,0 +1,1 @@
+n,k,p;main(i){for(scanf("%d",&p);~scanf("%d%d",&n,&k);puts("")){for(p=k,i=1;i>0||p-k;i--){putchar(p/n+'0');if(!(p/n)&&i>0)break;p=(p%n)*10+p/n;}}}

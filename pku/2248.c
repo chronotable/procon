@@ -1,0 +1,1 @@
+d,l,c,t[500000][12],i,j,k,g;main(n){for(;scanf("%d",&n),n;puts("")){l=t[0][0]=1;if(n==1){printf("1");continue;}for(c=0,d=1;;d++){for(i=l;c<i;c++){for(j=d-1;~j;j--){for(k=j;~k;k--){if(t[c][d-1]<t[c][j]+t[c][k]){for(g=0;g<d;g++)t[l][g]=t[c][g];t[l][g]=t[c][j]+t[c][k];if(t[l][g]==n)goto L;l++;}}}}}L:for(i=0;i<=d;)printf("%d ",t[l][i++]);}}

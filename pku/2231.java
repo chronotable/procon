@@ -1,0 +1,1 @@
+import java.util.*;class Main{public static void main(String[] b){Scanner s=new Scanner(System.in);int n=s.nextInt(),i;long c[]=new long[n],a=0;for(i=0;i<n;i++)c[i]=s.nextLong();Arrays.sort(c);for(i=1;i<n;i++)a+=(n-i)*i*(c[i]-c[i-1]);System.out.println(2*a);}}

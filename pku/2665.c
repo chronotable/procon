@@ -1,0 +1,1 @@
+double a;s,t;main(m){for(;scanf("%lf%d",&a,&m),a+m;printf("%.0lf\n",a+1))for(;m&&scanf("%d%d",&s,&t);m--)a-=t-s+1;}

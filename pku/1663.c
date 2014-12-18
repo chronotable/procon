@@ -1,0 +1,1 @@
+i,j;main(){for(scanf("%d",&i);~scanf("%d%d",&i,&j);)i==j?printf("%d\n",i%2?i*2-1:i*2):(i---j++==2?printf("%d\n",i%2?i*2:i*2-1):printf("No Number\n"));}

@@ -1,0 +1,1 @@
+n,a,o[15];char e[]={'+','-','.'};f(p,s,v,z){int i;if(p==n-1){s+=z?-v:v;if(!s){a++;if(a<21){for(i=0;i<n-1;i++)printf("%d %c ",i+1,e[o[i]]);printf("%d\n",n);}}}else{for(i=0;i<3;i++){o[p]=i;if(i==2){if(p+2>9)f(p+1,s,v*100+p+2,z);else f(p+1,s,v*10+p+2,z);}else{if(z)f(p+1,s-v,p+2,i);else f(p+1,s+v,p+2,i);}}}}main(){scanf("%d",&n);f(0,0,1,0);printf("%d",a);}

@@ -1,0 +1,1 @@
+int c(const void* a,const void* b){return *(int*)a-*(int*)b;}i,j,s,t,n,m[1000];main(a){for(scanf("%d",&t);t>0;t--,printf("%d\n",s)){scanf("%d",&n);for(s=i=0;i<n;i++)scanf("%d",m+i);qsort(m,n--,4,c);for(a=*m+m[1];n>2;n-=2)s+=(i=a+m[n]+m[1])>(j=m[n]+m[n-1]+m[0]*2)?j:i;s+=n==2?a+m[2]:m[n];}}

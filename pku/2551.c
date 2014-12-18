@@ -1,0 +1,1 @@
+m,n;main(i){for(;~scanf("%d",&n);printf("%d\n",m))for(i=m=1;i%n;m++)i=(i%n)*10+1;}

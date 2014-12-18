@@ -1,0 +1,1 @@
+char c[9][20];n,f,i,j,k,g;main(t){for(;~scanf("%s\n",c[n]);n=0,t++){for(;c[n++][0]!='9';)scanf("%s\n",c[n]);n--;for(f=i=0;i<n&&!f;i++){g=strlen(c[i]);for(j=0;j<n;j++){if(g<strlen(c[j])){for(k=0;k<g;k++)if(c[i][k]!=c[j][k])break;if(k==g)f=1;}}}printf("Set %d is %simmediately decodable\n",t,f?"not ":"");}}

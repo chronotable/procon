@@ -1,0 +1,33 @@
+t[100][100],u[100],g[100],a,n,c,i,j,x,y,m;
+main(){
+  scanf("%d",&n);
+  for(i=0;i<n;g[i]=i,i++)for(j=0;j<n;j++)scanf("%d",&t[i][j]);
+  scanf("%d",&c);
+  for(i=0;i<c;i++){
+    scanf("%d%d",&x,&y);
+    for(x--;x!=g[x];x=g[x]);
+    for(y--;y!=g[y];y=g[y]);
+    if(x==y)continue;
+    if(x>y)a=x,x=y,y=a;
+    for(j=0;j<n;j++)if(t[x][j]>t[y][j])t[x][j]=t[y][j];
+    g[y]=x;
+  }
+  for(i=0;i<n;i++){
+    for(x=i;x!=g[x];x=g[x]);
+    if(!x)u[i]=1;
+  }
+  for(a=0;;){
+    m=9999;
+    for(i=0;i<n;i++)if(t[0][i]&&!u[i]&&m>t[0][i])m=t[0][i],j=i;
+    if(m==9999)break;
+    a+=m;
+    for(;j!=g[j];j=g[j]);
+    for(x=0;x<n;x++)if(t[0][x]>t[j][x])t[0][x]=t[j][x];
+    for(x=0;x<n;x++){
+      if(u[i])continue;
+      for(y=x;y!=g[y];y=g[y]);
+      if(y==j)u[i]=1;
+    }
+  }
+  printf("%d\n",a);
+}

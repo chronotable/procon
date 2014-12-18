@@ -1,0 +1,1 @@
+a,p,e,i,d;main(b){for(;scanf("%d%d%d%d",&p,&e,&i,&d),~p;b++){for(a=d+1;(a-p)%23|(a-e)%28|(a-i)%33;a++);printf("Case %d: the next triple peak occurs in %d days.\n",b,a-d);}}

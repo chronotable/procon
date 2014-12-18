@@ -1,0 +1,1 @@
+u[60],n,m,g,i,s,w;f(t,q,p,j){if(!q)w=1;if(!w){if(p){for(j=t-p;j>0;j--)if(u[j])u[j]--,f(t,q-1,j+p==t?0:j+p),u[j]++;}else{for(j=50;!u[j];j--);u[j]--;f(t,q-1,j==t?0:j);u[j]++;}}}main(){for(;scanf("%d",&n),n;memset(u,0,sizeof(u))){for(w=g=m=i=0;i<n;m=s>m?s:m,g+=s,u[s]++,i++)scanf("%d",&s);for(i=m;i<g;i++){if(g%i==0)f(i,n,0);if(w)break;}printf("%d\n",i);}}

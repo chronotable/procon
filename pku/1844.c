@@ -1,0 +1,1 @@
+j,i;main(v){for(i=scanf("%d",&j);j>v||(v-j)%2;i++,v=i*(i+1)/2);printf("%d",i);}

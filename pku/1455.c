@@ -1,0 +1,1 @@
+n,a,b;main(i){for(;~scanf("%d",&n);--i&&printf("%d\n",a*(a-1)/2+b*(b-1)/2))a=n/2,b=(n+1)/2;}

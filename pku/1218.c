@@ -1,0 +1,1 @@
+i;main(k){for(;~scanf("%d",&k);)i++&&printf("%d\n",k=sqrt(k));}

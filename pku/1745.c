@@ -1,0 +1,1 @@
+n,k,l[10001],s[2][101],j;main(i){for(scanf("%d%d",&n,&k),i=0;i<n;l[i]=abs(l[i]%k),i++)scanf("%d",l+i);for(s[0][l[0]]=i=1;i<n;memset(s[++i%2],0,sizeof(s[0])))for(j=0;j<k;j++)if(s[(i-1)%2][j])s[i%2][(j+l[i])%k]=1,s[i%2][((j-l[i])+k)%k]=1;printf("%sivisible\n",s[(n-1)%2][0]?"D":"Not d");}
