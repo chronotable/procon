@@ -48,3 +48,33 @@ public class TheKingsFactorization{
         return ans;
     }
 }
+
+// simple version
+/*
+import java.util.*;
+import static java.lang.Math.*;
+
+public class TheKingsFactorization{
+    public long[] getVector(long n, long[] primes){
+        int h = primes.length;
+        Arrays.sort(primes);
+        ArrayList<Long> ps = new ArrayList<Long>();
+        for(long v : primes){n /= v; ps.add(v);}
+        if(n == 1)return primes;
+        for(int i = 1; i < h; i++){
+            if(primes[i-1] <= n && n <= primes[i]){
+                ps.add(n);
+                n = 1;
+                break;
+            }
+            for(long j = primes[i-1]; j <= primes[i]; j++)if(n % j == 0){ps.add(j); n /= j; break;}
+        }
+        if(n != 1)ps.add(n);
+        long[] ret = new long[ps.size()];
+        for(int i = 0; i < ret.length; i++)ret[i] = ps.get(i);
+        Arrays.sort(ret);
+        return ret;
+    }
+}
+*/
+
